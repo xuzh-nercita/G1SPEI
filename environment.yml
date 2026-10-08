@@ -1,0 +1,12 @@
+name: g1spei
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - gdal>=3.6
+  - numpy>=1.24
+  - scipy>=1.10
+  - pip
+  - setuptools>=68
+  - pytest>=7
+  - ruff>=0.8

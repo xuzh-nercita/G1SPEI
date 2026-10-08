@@ -1,0 +1,8 @@
+{
+  "python": "3.13.5",
+  "numpy": "2.1.3",
+  "scipy": "1.15.3",
+  "gdal": "GDAL 3.11.0 \"Eganville\", released 2025/05/06",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "syntax_and_black_checked_files": 13
+}
