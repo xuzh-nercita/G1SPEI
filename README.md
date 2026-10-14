@@ -26,6 +26,42 @@ not an empirically optimized climatological threshold. Rapid PET uses climatolog
 heat index, whereas the historical G1SPEI dataset used annual heat indices. Consequently,
 rapid updates are **not guaranteed to reproduce historical G1SPEI exactly**.
 
+## Parameter data
+
+The parameter and ancillary data required to run the G1SPEI framework
+are available from Science Data Bank (ScienceDB):
+
+**[Download the G1SPEI parameter dataset](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a)**
+
+The dataset contains the climatological fields used for precipitation
+and temperature downscaling, high-resolution precipitation standard
+deviation fields, calendar-month-specific Gamma distribution parameters,
+and the climatological heat index used for rapid PET calculation.
+
+Download all parameter archives and the accompanying `manifest.json`.
+Extract the archives into a common parameter directory, preserving
+their internal folder structure, and place `manifest.json` at the root
+of that directory. The current software requires the complete parameter
+bundle, even when processing a single month.
+
+Verify the extracted files before running the framework:
+
+```sh
+python -m g1spei verify-parameters --parameters /path/to/G1SPEI-parameters-v1.0.0
+```
+
+Replace `/path/to/G1SPEI-parameters-v1.0.0` with your local parameter
+directory. See [Parameter setup](docs/PARAMETERS.md) for details.
+
+This parameter dataset supports the rapid-production software.
+The historical precipitation, temperature, and G1SPEI products for
+1951–2025 are available separately at
+https://doi.org/10.11888/Atmos.tpdc.303658.
+
+The MIT license applies to the software. For parameter-data licensing
+and attribution, consult the ScienceDB record and the accompanying
+provenance documentation.
+
 ## Install
 
 Use a conda-forge environment so GDAL's Python package and native library agree.
