@@ -24,9 +24,18 @@ python -m g1spei run --parameters demo/parameters --precipitation demo/precipita
 
 ## 2. 支撑数据与文件组织
 
-代码与参数分开发布。GitHub 只上传本代码目录；约 41 GB 参数上传 Zenodo。
-参数尚无公开 DOI，发布后在 [PARAMETERS.md](docs/PARAMETERS.md) 填写真实链接。
-将所有参数压缩包解压到同一个目录，文件夹结构会自动合并，例如：
+代码与参数分开发布：GitHub 提供程序和运行文档，参数与支撑数据已发布于 ScienceDB。
+
+**[下载 G1SPEI 参数数据集](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a)**
+
+请下载全部参数压缩包，以及配套的 `manifest.json`、文件说明和校验文件。
+当前版本即使只计算一个月份，也需要完整参数集。
+
+将所有参数压缩包解压到同一个参数目录，保留压缩包内部的文件夹结构，
+并将配套的 `manifest.json` 放在该参数目录根部。
+不要将每个压缩包分别解压到额外的同名子目录中。
+
+详细说明见 [PARAMETERS.md](docs/PARAMETERS.md)。目录组织示例如下：
 
 ```text
 workspace/
@@ -100,6 +109,15 @@ SPEI 达到上下限的数量；再结合 QA 做空间检查。极大降水标�
 避免把不完整结果当成成功结果。程序不自动清空用户目录、不覆盖原始文件。
 中断后请指定新的输出路径重跑；确认无用后再自行删除旧 `.partial` 目录。
 
-GitHub 上传本代码目录即可，忽略规则已经排除大栅格和运行结果。Zenodo 上传参数压缩包、
-`manifest.json`、文件说明及校验文件。公开发布前补充真实 DOI 和参数数据许可；MIT 仅适用于
-代码与文档，不能替代 WorldClim 等来源数据的许可。参见 [发布步骤](docs/RELEASE.md)。
+GitHub 提供代码和运行文档；完整参数与支撑数据通过
+[ScienceDB](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a)
+单独发布。无需将大体积参数栅格或运行结果上传到 GitHub。
+
+使用本框架时，请保留软件版本、参数清单及运行记录，并按 `CITATION.cff`
+和 ScienceDB 数据集页面提供的信息分别引用软件与参数数据集。
+
+1951–2025 年的降水、温度和 G1SPEI 历史产品单独存档于：
+https://doi.org/10.11888/Atmos.tpdc.303658。
+
+MIT 许可证仅适用于代码与文档。参数数据的许可和来源署名要求，
+请查阅 ScienceDB 数据集页面及配套来源说明，不能直接套用代码的 MIT 许可证。
