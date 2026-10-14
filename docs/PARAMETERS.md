@@ -1,8 +1,17 @@
 # Parameter bundle v1.0.0
 
-**Download/DOI status:** not yet deposited. The author will upload the prepared
-archives to Zenodo. Add the actual version-specific DOI here after deposit; no
-placeholder URL should be treated as a working download link.
+**Availability:** The parameter and ancillary dataset is published on
+Science Data Bank (ScienceDB).
+
+**[Download the parameter dataset](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a)**
+
+Download all parameter archives and the accompanying metadata and checksum files.
+The current software requires the complete parameter bundle, including when
+processing only one month.
+
+These files support the G1SPEI rapid-production framework. They are separate
+from the historical precipitation, temperature, and SPEI products archived at
+https://doi.org/10.11888/Atmos.tpdc.303658.
 
 Extract every archive into one directory, then place the distributed `manifest.json`
 at its root. Archives contain different folders/files; none replaces another.
@@ -41,10 +50,15 @@ against the existing baseline heat index is recorded in the validation report.
 
 ## Licensing and provenance
 
-MIT applies to the software. The parameter bundle includes WorldClim climatologies,
-ERA5-Land-derived climatologies and author-derived RF/Gamma/heat-index fields.
-Confirm source-data redistribution terms and assign an appropriate data license
-before publishing the Zenodo record. Do not label all source data MIT by inheritance.
+MIT applies to the software and its documentation. The parameter bundle includes
+WorldClim climatologies, ERA5-Land-derived climatologies, and author-derived
+RF precipitation standard deviation, Gamma parameter, and heat-index fields.
+
+Consult the
+[ScienceDB dataset record](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a)
+and the accompanying provenance documentation for the applicable data license,
+source acknowledgements, and redistribution conditions. The software's MIT
+license does not automatically apply to the parameter rasters or their source data.
 
 Source information: [ERA5-Land](https://doi.org/10.5194/essd-13-4349-2021),
 [WorldClim 2](https://doi.org/10.1002/joc.5086),
