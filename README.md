@@ -93,9 +93,11 @@ instead of overwriting results.
 
 ## Run a real month
 
-1. Obtain the separately distributed parameter bundle. Its Zenodo record is not yet
-   published; see [parameter setup](docs/PARAMETERS.md). Do not substitute the 1990
-   test heat-index file.
+1. Download the complete parameter bundle from
+   [ScienceDB](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a).
+   See [parameter setup](docs/PARAMETERS.md) for deployment instructions.
+   Use the supplied climatological heat-index file; do not substitute the
+   1990 test heat-index file.
 2. Extract all parameter archives into one parent directory. That directory must
    contain `manifest.json` and the folders listed in it.
 3. Verify the full bundle once after download or transfer:
@@ -147,7 +149,19 @@ is no automatic overwrite or resume of partial raster tiles.
 ## Reproducibility and citation
 
 Keep the software version, parameter manifest checksum, forcing source/version,
-units and `run.json` with results. Cite the software using `CITATION.cff`, the
-parameter record once published, and the underlying ERA5-Land/WorldClim sources.
+units and `run.json` with results.
+
+Cite the software using `CITATION.cff` and cite the parameter dataset using the
+citation provided by its
+[ScienceDB record](https://www.scidb.cn/detail?dataSetId=35d7d7bae537462c8646b5d624c2291a).
+Also acknowledge the underlying ERA5-Land and WorldClim sources as appropriate.
+
+The historical precipitation, temperature, and G1SPEI products for 1951–2025
+are archived separately at
+https://doi.org/10.11888/Atmos.tpdc.303658.
+This historical-product DOI does not identify the parameter dataset or software.
+
 The MIT license applies to code and documentation, **not automatically to the
-parameter rasters or their source datasets**. Parameter licensing is separate.
+parameter rasters or their source datasets**. Consult the ScienceDB record and
+the accompanying provenance documentation for parameter-data licensing and
+source attribution.
